@@ -1,0 +1,7 @@
+.menu {
+   border: 3px solid #ccc;
+   border-radius: 4px; 
+   width: fit-content;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
