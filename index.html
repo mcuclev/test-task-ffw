@@ -14,46 +14,60 @@
     <main>
         <div class="wrapper">
             <div class="nav">
-                <div class="nav__tab nav__tab--title">
+                <div class="nav__title">
                     Please select one font
                 </div>
                 <div class="nav__tab-wrapper">
-                    <button class="nav__tab" onclick="openTab(event, 'My Fonts')">
+                    <button class="nav__tab" id="defaultBtn" onclick="openTab(event, 'myFonts')">
                         MY FONTS
                     </button>
-                    <button class="nav__tab" onclick="openTab(event, 'Buy Fonts')">
+                    <button class="nav__tab" onclick="openTab(event, 'buyFonts')">
                         BUY FONTS
                     </button>
                 </div>
             </div>
             <form class="card-grid" id="myFonts">
-                <div class="card card--vert">
-                    <div class="card__icon card__icon--merriweather">
-                       <p>M</p>
-                    </div>
-                    <div class="card__desc">
-                        <p>Merriweather project is led by Sorkin Type</p>
-                    </div>
-                </div>
+                <label>
+                    <input type="radio" name="font" id="mrw">
+                        <div class="card card--vert">
+                            <div class="card__icon card__icon--merriweather">
+                            <p>M</p>
+                            </div>
+                            <div class="card__desc">
+                                <p>Merriweather project is led by Sorkin Type</p>
+                            </div>
+                        </div>
+                </label>
                 <div class="card-column">
-                    <div class="card card--hor">
-                        <div class="card__icon card__icon--roboto">
-                           <p>R</p>
+                    <label>
+                        <input type="radio" name="font" id="rbt" />
+                            <div class="card card--hor">
+                                <div class="card__icon card__icon--roboto">
+                                    <p>R</p>
+                                </div>
+                                <div class="card__desc">
+                                    <p>Roboto doesn't compromise, allow-<br>ing letters</p>
+                                </div>
                         </div>
-                        <div class="card__desc">
-                            <p>Roboto doesn't compromise, allowing letters</p>
-                        </div>
-                    </div>
-                    <div class="card card--hor">
-                        <div class="card__icon card__icon--notosans">
-                            <p>NS</p> 
-                        </div>
-                        <div class="card__desc">
-                            <p>Noto Sans covers over 30 scripts</p>
-                        </div>
-                    </div>
+                    </label>
+                    <label>
+                       <input type="radio" name="font" id="nts">
+                            <div class="card card--hor">
+                                <div class="card__icon card__icon--notosans">
+                                    <p>NS</p> 
+                                </div>
+                                <div class="card__desc">
+                                    <p>Noto Sans covers over 30 scripts</p>
+                                </div>
+                            </div>
+                    </label>
                 </div>
-            </div>
+            </form>
+            <form class="card-grid" id="buyFonts">
+                <div class="card">
+                    <div class="card__desc card__desc--buy-fonts">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare neque in tristique mattis. Proin in tellus non elit pellentesque consequat vitae sed risus. Praesent pretium iaculis nulla, non consectetur lectus fermentum vitae. Donec sit amet est a ex sodales fringilla vitae ut augue.</div>
+                </div>
+            </form>
         </div>
     </main>
     <footer>

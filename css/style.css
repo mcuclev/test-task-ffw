@@ -21,6 +21,7 @@ body {
 
 .nav__tab {
     border: none;
+    overflow: hidden;
     font-weight: 700;
     font-size: 10pt;
     padding: 10px;
@@ -38,7 +39,11 @@ body {
     color: orangered;
 }
 
-.nav__tab--title {
+.nav__tab--active {
+    color: orangered;
+}
+
+.nav__title {
     font-size: 20pt;
     font-weight: 400;
     color: black;
@@ -48,11 +53,15 @@ body {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   padding: 100px;
+   padding: 50px;
    border: 3px solid #ccc;
    border-radius: 6px; 
-   width: fit-content;
+   width: 40vw;
    gap: 10px;
+}
+
+.card-grid input {
+    display: none;
 }
 
 .card-column {
@@ -61,27 +70,45 @@ body {
     gap: 10px;
 }
 
-.card--vert {
+.card {
     display: flex;
-    flex-direction: column;
     align-content: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card-grid input:checked + .card {
+    opacity: 0.5;
+}
+
+.card--vert {
+    flex-direction: column;
 }
 
 .card--hor {
-    display: flex;
     flex-direction: row;
-    align-content: center;
 }
 
 .card__desc {
     display: list-item;
     list-style-type: disc;
     list-style-position: inside;
-    width: 60%;
+    width: 55%;
+}
+
+.card__desc--buy-fonts {
+    text-align: center;
+    display: block;
+    width: auto;
 }
 
 .card__desc::marker {
     color:#ccc;
+    font-size: 1.5vw;
+    margin: 0;
 }
 
 .card__icon {
@@ -93,11 +120,15 @@ body {
     position: relative;
 }
 
-.card__icon  p{
+.card__icon p{
     font-weight: 700;
     padding-left: 0.5vw;
     color: rgb(204, 204, 204, 0.6);
     position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0.6vw;
+    margin-left: 0.6vw;
 }
 
 .card__icon--merriweather {
@@ -105,7 +136,6 @@ body {
     width: 7vw;
     height: 7vw;
     font-size: 2vw;
-
 }
 
 .card__icon--roboto {
