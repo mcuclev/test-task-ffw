@@ -1,7 +1,117 @@
-.menu {
-   border: 3px solid #ccc;
-   border-radius: 4px; 
-   width: fit-content;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+.wrapper {
+    width: fit-content;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: baseline;
+}
+
+.nav__tab-wrapper {
+    display: flex;
+}
+
+.nav__tab {
+    border: none;
+    font-weight: 700;
+    font-size: 10pt;
+    padding: 10px;
+    width: fit-content;
+    color: #ccc;
+    background-color: transparent;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.nav__tab:hover {
+    cursor: pointer;
+    color: orangered;
+}
+
+.nav__tab--title {
+    font-size: 20pt;
+    font-weight: 400;
+    color: black;
+}
+
+.card-grid {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 100px;
+   border: 3px solid #ccc;
+   border-radius: 6px; 
+   width: fit-content;
+   gap: 10px;
+}
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card--vert {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.card--hor {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.card__desc {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+    width: 60%;
+}
+
+.card__desc::marker {
+    color:#ccc;
+}
+
+.card__icon {
+    outline: 1px solid black;
+    border-radius: 15px;
+    padding: 4px;
+    width: 5vw;
+    height: 5vw;
+    position: relative;
+}
+
+.card__icon  p{
+    font-weight: 700;
+    padding-left: 0.5vw;
+    color: rgb(204, 204, 204, 0.6);
+    position: absolute;
+}
+
+.card__icon--merriweather {
+    background: #00a652 content-box;
+    width: 7vw;
+    height: 7vw;
+    font-size: 2vw;
+
+}
+
+.card__icon--roboto {
+    background: #FF7FC2 content-box;
+}
+
+.card__icon--notosans {
+    background: #006DFE content-box;
+}
