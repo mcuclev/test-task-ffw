@@ -13,7 +13,7 @@ let parseUrl = (url) => {
     //option 1 - new URL()
     const a = new URL(url);
     
-    //option 2 - createElement --browser-only
+    //option 2 - createElement - browser-only
     // let a = document.createElement('a');
     // a.setAttribute('href', url);
 
