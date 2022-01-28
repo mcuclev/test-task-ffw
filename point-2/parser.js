@@ -10,6 +10,7 @@ class UrlObject {
 
 let parseUrl = (url) => {
     
+    //did not consider RegEx as this approach wouldn't be the most succinct
     //option 1 - new URL()
     const a = new URL(url);
     
