@@ -13,7 +13,7 @@
     </header>
     <main>
         <div class="wrapper">
-            <div class="nav">
+            <div class="nav" id="nav">
                 <div class="nav__title">
                     Please select one font
                 </div>
@@ -21,10 +21,13 @@
                     <button class="nav__tab" id="defaultBtn" onclick="openTab(event, 'myFonts')">
                         MY FONTS
                     </button>
-                    <button class="nav__tab" onclick="openTab(event, 'buyFonts')">
+                    <button class="nav__tab nav__tab--buy-fonts" onclick="openTab(event, 'buyFonts')">
                         BUY FONTS
                     </button>
                 </div>
+                <button class="nav__tab nav__tab--hamburger" onclick="toggleRespNav()">
+                    <i class="fa fa-bars"></i>
+                </button>
             </div>
             <form class="card-grid" id="myFonts">
                 <label>
@@ -34,7 +37,9 @@
                             <p>M</p>
                             </div>
                             <div class="card__desc">
-                                <p>Merriweather project is led by Sorkin Type</p>
+                               <ul>
+                                   <li>Merriweather project is led by Sorkin Type</li>
+                               </ul> 
                             </div>
                         </div>
                 </label>
@@ -46,7 +51,7 @@
                                     <p>R</p>
                                 </div>
                                 <div class="card__desc">
-                                    <p>Roboto doesn't compromise, allow-<br>ing letters</p>
+                                    <ul><li>Roboto doesn't compromise, allowing letters</li></ul>
                                 </div>
                         </div>
                     </label>
@@ -57,14 +62,14 @@
                                     <p>NS</p> 
                                 </div>
                                 <div class="card__desc">
-                                    <p>Noto Sans covers over 30 scripts</p>
+                                    <ul><li>Noto Sans covers over 30 scripts</li></ul>
                                 </div>
                             </div>
                     </label>
                 </div>
             </form>
             <form class="card-grid" id="buyFonts">
-                <div class="card">
+                <div class="card card--buy-fonts">
                     <div class="card__desc card__desc--buy-fonts">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare neque in tristique mattis. Proin in tellus non elit pellentesque consequat vitae sed risus. Praesent pretium iaculis nulla, non consectetur lectus fermentum vitae. Donec sit amet est a ex sodales fringilla vitae ut augue.</div>
                 </div>
             </form>
